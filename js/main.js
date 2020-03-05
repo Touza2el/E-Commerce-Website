@@ -1,4 +1,18 @@
 // #-1 Start Header Section -------------------------------------------------------------------------------------
+// Fix The Header and Hide user-nav section on scrolling
+const headerSection = document.querySelector(".header-section");
+const userNav = document.querySelector(".user-nav");
+
+window.onscroll = function() {
+  docScrollTop = document.documentElement.scrollTop;
+  if (docScrollTop > 200) {
+    headerSection.classList.add("fix-header");
+    userNav.style.display = "none";
+  } else {
+    headerSection.classList.remove("fix-header");
+    userNav.style.display = "flex";
+  }
+};
 
 // Add active class to clicked Nav-Link (li)
 const mainNavLinks = document.querySelectorAll(".main-nav-links li"); // NodeList
@@ -24,6 +38,9 @@ function showNav() {
   mobileNavigation.style.transition = "transform 1s ease";
   mainNavBoxCover.classList.toggle("show-menu-mobile");
   mainNavBoxCover.style.transition = "transform 1s ease";
+  document
+    .querySelector(".hero-section-content")
+    .classList.toggle("hero-section-content-hide");
 }
 
 hamburgerMenu.addEventListener("click", showNav);
