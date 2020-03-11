@@ -1,4 +1,4 @@
-// #-1 Start Header Section -------------------------------------------------------------------------------------
+// #-1 Start Header Section ------------------------------------------------------------------------------------
 // Fix The Header and Hide user-nav section on scrolling
 const headerSection = document.querySelector(".header-section");
 const userNav = document.querySelector(".user-nav");
@@ -13,7 +13,6 @@ window.onscroll = function() {
     userNav.style.display = "flex";
   }
 };
-
 // Add active class to clicked Nav-Link (li)
 const mainNavLinks = document.querySelectorAll(".main-nav-links li"); // NodeList
 
@@ -46,6 +45,22 @@ function showNav() {
 hamburgerMenu.addEventListener("click", showNav);
 
 // End Header Section -------------------------------------------------------------------------------------------
+// Start Top Product Section
+const productItems = document.querySelectorAll(".products-content-item");
+const arrowBtns = document.querySelectorAll(".arrow-btn");
+
+arrowBtns.forEach(item => {
+  item.addEventListener("click", function() {
+    productItems[0].classList.toggle("product-item-show");
+  });
+});
+
+// productItems.forEach(item => {});
+// arrowBtn.addEventListener("click", function net() {
+//   productItem1.classList.toggle("product-item-show");
+// });
+
+// End Top Product Section
 
 // #-2 Start Discover-Collection Section ------------------------------------------------------------------------
 
