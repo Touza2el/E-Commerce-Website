@@ -11,6 +11,11 @@
   --redColor: #c52032;
   --blackColor: #2d2d2d;
 }
+
+.container {
+  width: 85%;
+  margin: auto;
+}
 ul {
   list-style: none;
 }
@@ -18,11 +23,17 @@ a {
   text-transform: capitalize;
   text-decoration: none;
 }
-.container {
-  width: 85%;
-  margin: auto;
+.section-title h2 {
+  color: var(--blackColor);
+  padding: 25px 0;
+  text-align: center;
+  text-transform: capitalize;
 }
-
+.section-title h2 span {
+  display: inline-block;
+  color: var(--redColor);
+  font-size: 30px;
+}
 /* ----- End Global Style ----- */
 
 /* ----- Start Header Section ----- */
@@ -342,6 +353,7 @@ header.fix-header .hamburger-menu:hover {
   margin-top: 35px;
   display: flex;
   justify-content: space-between;
+  background-color: rgba(238, 238, 238, 0.4);
 }
 .products-info-item {
   flex: 0 0 calc(33% - 25px);
@@ -379,18 +391,6 @@ header.fix-header .hamburger-menu:hover {
 /* ----- End Top Products Section ----- */
 
 /* ----- Start Discover-Collection Section ----- */
-
-.discover-collection-title h2 {
-  color: var(--blackColor);
-  padding: 25px 0;
-  text-align: center;
-  text-transform: capitalize;
-}
-.discover-collection-title h2 span {
-  display: inline-block;
-  color: var(--redColor);
-  font-size: 30px;
-}
 .discover-collection-container {
   overflow: hidden;
 }
@@ -472,7 +472,123 @@ header.fix-header .hamburger-menu:hover {
   background-color: var(--blackColor);
 }
 
-/* ----- Start Discover-Collection Section ----- */
+/* ----- End Discover-Collection Section ----- */
+
+/* ----- Start Product-Category Section ----- */
+
+.product-category {
+  background-color: rgba(238, 238, 238, 0.2);
+}
+.product-category-links {
+  display: flex;
+  justify-content: center;
+}
+.product-category-links ul {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+.product-category-links ul li {
+  display: inline-block;
+  padding-bottom: 3px;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: capitalize;
+  color: var(--blackColor);
+}
+.product-links-line {
+  border-bottom: 3px solid var(--redColor);
+}
+.product-category-item {
+  width: 100%;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.product-category-box {
+  margin-top: 30px;
+  padding: 15px;
+  flex: 0 0 calc(33.3% - 20px);
+  max-width: calc(33.3% - 20px);
+  height: 500px;
+}
+.product-brand {
+  height: 15%;
+}
+.product-brand h3 {
+  color: var(--blackColor);
+  text-transform: capitalize;
+}
+.product-brand h4 {
+  color: var(--redColor);
+  text-transform: capitalize;
+}
+.product-image {
+  height: 50%;
+}
+.product-image img {
+  width: 100%;
+  display: block;
+}
+.product-description {
+  height: 20%;
+  color: gray;
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+}
+.product-price-info {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-price-info p {
+  color: var(--blackColor);
+  font-weight: bold;
+}
+.product-price-info a {
+  padding: 7px;
+  color: #fff;
+  background-color: var(--redColor);
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+.product-price-info a:hover {
+  color: var(--redColor);
+  background-color: transparent;
+}
+#product-1-category .product-category-box {
+  border: 1px solid rgba(128, 128, 128, 0.346);
+}
+#product-2-category .product-category-box {
+  background-color: var(--blackColor);
+}
+#product-3-category .product-category-box {
+  background-color: var(--redColor);
+}
+.hide-product {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.show-product {
+  display: flex;
+}
+.product-category-btn {
+  padding: 50px 0;
+  text-align: center;
+}
+.product-category-btn a {
+  padding: 15px 10px;
+  color: #fff;
+  background-color: var(--blackColor);
+  font-weight: 500;
+  transition: all 0.4s ease-in;
+}
+.product-category-btn a:hover {
+  color: var(--blackColor);
+  background-color: #fff;
+}
+/* ----- End Product-Category Section ----- */
 
 /* ----- Start Footer Section ----- */
 
@@ -615,15 +731,38 @@ header.fix-header .hamburger-menu:hover {
   .hamburger-menu:hover {
     color: var(--redColor);
   }
+  /* Product-Category */
+  .product-image {
+    height: 40%;
+  }
+  .product-description {
+    height: 30%;
+  }
 }
 @media (max-width: 1000px) {
   /* Top Products */
   .products-info-item {
+    padding: 10px;
     flex-direction: column;
     align-items: center;
   }
+  .products-info-item .icon {
+    flex: 0 0 50%;
+    font-size: 15px;
+  }
+  .products-info-item .text {
+    font-size: 14px;
+    flex: 0 0 50%;
+  }
   .products-info-item .text p:last-of-type {
     display: none;
+  }
+  /* Product-Category */
+  .product-image {
+    height: 35%;
+  }
+  .product-description {
+    height: 35%;
   }
   /* Footer */
   .footer-links {
@@ -655,6 +794,17 @@ header.fix-header .hamburger-menu:hover {
   }
   .hero-section-content p {
     display: none;
+  }
+  /* Product-Category-1 */
+  .product-category-box {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+  .product-image {
+    height: 50%;
+  }
+  .product-description {
+    height: 20%;
   }
 }
 @media (max-width: 800px) {
@@ -710,6 +860,14 @@ header.fix-header .hamburger-menu:hover {
     left: 15px;
     cursor: pointer;
     z-index: 12;
+  }
+  /* Product-Category-1 */
+
+  .product-image {
+    height: 40%;
+  }
+  .product-description {
+    height: 30%;
   }
   /* Footer-Section */
   .footer-nav-item {
@@ -788,12 +946,28 @@ header.fix-header .hamburger-menu:hover {
     top: 57px;
     height: calc(100vh - 57px);
   }
-
   .main-nav-search-box {
     display: none;
   }
   .hero-section-content h1 {
     font-size: 25px;
+  }
+  /* Product-Category */
+  .product-category-box {
+    margin-top: 30px;
+    padding: 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 500px;
+    position: relative;
+  }
+  .product-description {
+    display: none;
+  }
+  .product-price-info {
+    position: absolute;
+    width: 95%;
+    bottom: 0;
   }
 }
 @media (max-width: 500px) {
@@ -831,6 +1005,12 @@ header.fix-header .hamburger-menu:hover {
   .hero-section-image-mobile img {
     display: block;
     width: 100%;
+  }
+  /* Product-Category */
+  .product-description {
+    display: block;
+    position: absolute;
+    bottom: 0;
   }
   /* Footer */
   .footer-content-info ul li {

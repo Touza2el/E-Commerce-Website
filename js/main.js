@@ -1,4 +1,4 @@
-// #-1 Start Header Section ------------------------------------------------------------------------------------
+// #-Start Header Section ------------------------------------------------------------------------------------
 // Fix The Header and Hide user-nav section on scrolling
 const headerSection = document.querySelector(".header-section");
 const userNav = document.querySelector(".user-nav");
@@ -44,8 +44,9 @@ function showNav() {
 
 hamburgerMenu.addEventListener("click", showNav);
 
-// End Header Section -------------------------------------------------------------------------------------------
-// Start Top Product Section
+// #-End Header Section
+
+// #-Start Top Product Section
 const productItems = document.querySelectorAll(".products-content-item");
 const arrowBtns = document.querySelectorAll(".arrow-btn");
 
@@ -55,14 +56,9 @@ arrowBtns.forEach(item => {
   });
 });
 
-// productItems.forEach(item => {});
-// arrowBtn.addEventListener("click", function net() {
-//   productItem1.classList.toggle("product-item-show");
-// });
+// #-End Top Product Section
 
-// End Top Product Section
-
-// #-2 Start Discover-Collection Section ------------------------------------------------------------------------
+// #-Start Discover-Collection Section
 
 const itemsContainer = document.querySelector(".discover-collection-content"); // HTML element = object
 const itemsContainerWidth = itemsContainer.offsetWidth; // Number
@@ -139,4 +135,20 @@ function changeSlide() {
 // The Event
 window.onload = load();
 
-// End Discover-Collection Section ------------------------------------------------------------------------------
+// #-End Discover-Collection Section
+
+// #-Start Product-Category Section
+
+const productLinks = document.querySelectorAll(".product-category-links ul li");
+const productCatItems = document.querySelectorAll(".product-category-item");
+
+function showProduct() {
+  productCatItems.forEach(item => (item.style.display = "none"));
+  document.querySelector(`#${this.id}-category`).style.display = "flex";
+  productLinks.forEach(item => item.classList.remove("product-links-line"));
+  this.classList.add("product-links-line");
+}
+
+productLinks.forEach(item => item.addEventListener("click", showProduct));
+
+// #-End Product-category Section
