@@ -18,7 +18,7 @@
         </div>
         <div class="user-nav-items">
           <ul>
-            <li><a href="#">sign in</a></li>
+            <li class="sign-in"><a href="#">sign in</a></li>
             <li>
               <a href="#">cart <span>0</span></a>
             </li>
@@ -114,28 +114,81 @@
         <img src="images/hero-image.jpg" />
       </div>
     </div>
+    <!-- ----- Start Modal-Form -----  -->
+
+    <div class="modal-form">
+      <div class="modal-form-content">
+        <div class="form-container sign-in-container">
+          <form action="#">
+            <h1>sign in</h1>
+            <div class="social-media">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-google-plus-g"></i>
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <span class="or">or</span>
+            <span>use your account</span>
+            <input type="email" placeholder="email" />
+            <input type="password" placeholder="password" />
+            <a href="#">forgot your password ?</a>
+            <button class="sign-in-form-btn">sign in</button>
+          </form>
+        </div>
+        <div class="form-container sign-up-container">
+          <span class="x-close">x</span>
+          <form action="#">
+            <h1>create new account</h1>
+            <div class="social-media">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-google-plus-g"></i>
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <span class="or">or</span>
+            <span>use your email for registration</span>
+            <input type="text" placeholder="name" />
+            <input type="email" placeholder="email" />
+            <input type="password" placeholder="password" />
+            <button class="sign-up-form-btn">sign up</button>
+          </form>
+        </div>
+        <div class="overlay-container">
+          <div class="overlay">
+            <div class="overlay-panel overlay-left">
+              <h1>welcome back</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                Inventore
+              </p>
+              <button class="sign-in-overlay-btn">sign in</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+              <span class="xx-close">x</span>
+              <h1>hello, friend</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                Inventore
+              </p>
+              <button class="sign-up-overlay-btn">sign up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----- End Modal-Form -----  -->
 
     <!-- ----- End Hero Section ----- -->
 
     <!-- ----- Start Top Products Section ----- -->
 
     <section class="top-products">
+      <div class="section-title">
+        <h2><span>|</span> trending products <span>|</span></h2>
+      </div>
       <div class="container">
         <div class="top-products-content   product-item-show">
-          <div class="products-content-item ">
-            <div class="products-content-text">
-              <h1>#-one phone seller</h1>
-              <p>choose your product with confidence</p>
-              <a href="#">buy now</a>
-            </div>
-          </div>
-          <div class="products-content-item ">
-            <div class="products-content-text">
-              <h1>#-laptop for everyone</h1>
-              <p>make your business grow fast</p>
-              <a href="#">buy now</a>
-            </div>
-          </div>
+          <div class="products-content-item "></div>
+          <div class="products-content-item "></div>
           <div class="products-content-arrows">
             <i class="fas fa-angle-double-left fa-lg arrow-btn"></i>
             <i class="fas fa-angle-double-right fa-lg arrow-btn"></i>
@@ -184,9 +237,9 @@
       <div class="discover-collection-container">
         <div class="discover-collection-content">
           <div class="discover-collection-item mobile-image1"></div>
-          <div class="discover-collection-item">
+          <div class="discover-collection-item border">
             <div class="item-text-wrapper">
-              <h3>group app.real</h3>
+              <h3>best <span class="discover">/P</span>rod world</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing Velit
                 laboriosam placeat quam iusto nam voluptatibus fuga eum
@@ -196,7 +249,7 @@
             </div>
           </div>
           <div class="discover-collection-item mobile-image2"></div>
-          <div class="discover-collection-item">
+          <div class="discover-collection-item border">
             <div class="item-text-wrapper">
               <h3>new product</h3>
               <p>
@@ -208,7 +261,7 @@
             </div>
           </div>
           <div class="discover-collection-item mobile-image3"></div>
-          <div class="discover-collection-item">
+          <div class="discover-collection-item border">
             <div class="item-text-wrapper">
               <h3>take a break</h3>
               <p>

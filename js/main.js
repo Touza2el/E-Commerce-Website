@@ -1,4 +1,4 @@
-// #-Start Header Section ------------------------------------------------------------------------------------
+// #-Start Header Section
 // Fix The Header and Hide user-nav section on scrolling
 const headerSection = document.querySelector(".header-section");
 const userNav = document.querySelector(".user-nav");
@@ -45,6 +45,42 @@ function showNav() {
 hamburgerMenu.addEventListener("click", showNav);
 
 // #-End Header Section
+
+// #-Start Modal Form
+// Show and Hide Modal Form
+const modalForm = document.querySelector(".modal-form");
+const signInBtn = document.querySelector(".sign-in");
+const xCloseBtn = document.querySelector(".x-close");
+const xxCloseBtn = document.querySelector(".xx-close");
+
+function showModalForm() {
+  modalForm.style.display = "flex";
+}
+function hideModalForm() {
+  modalForm.style.display = "none";
+}
+
+signInBtn.addEventListener("click", showModalForm);
+xCloseBtn.addEventListener("click", hideModalForm);
+xxCloseBtn.addEventListener("click", hideModalForm);
+
+// Move Between Sign-in & Sign-up Forms
+const modalFormContent = document.querySelector(".modal-form-content");
+const signInOverlayBtn = document.querySelector(".sign-in-overlay-btn");
+const signUpOverlayBtn = document.querySelector(".sign-up-overlay-btn");
+const signInFormBtn = document.querySelector(".sign-in-form-btn");
+const signUpFormBtn = document.querySelector(".sign-up-form-btn");
+
+signUpOverlayBtn.addEventListener("click", () =>
+  modalFormContent.classList.add("move-active")
+);
+signInOverlayBtn.addEventListener("click", () =>
+  modalFormContent.classList.remove("move-active")
+);
+signInFormBtn.addEventListener("click", hideModalForm);
+signUpFormBtn.addEventListener("click", hideModalForm);
+
+// #-End Modal Form
 
 // #-Start Top Product Section
 const productItems = document.querySelectorAll(".products-content-item");
